@@ -39,7 +39,8 @@ const Dashboard = () => {
   const [loading, setLoading] = useState(true);
   const [selectedMonth, setSelectedMonth] = useState(new Date());
   const token = Cookies.get('authToken');
-
+  const [predictedExpense, setPredictedExpense] = useState(null); 
+  const [predictionDate, setPredictionDate] = useState(new Date()); 
   useEffect(() => {
     const fetchDashboardData = async (month) => {
       try {
@@ -59,6 +60,25 @@ const Dashboard = () => {
 
     fetchDashboardData(selectedMonth);
   }, [selectedMonth, token]);
+
+  const fetchPredictedExpense = async () => {
+    const token = Cookies.get('authToken');
+    try {
+      
+      const month = predictionDate.toISOString().slice(0, 7);
+      // console.log(monthString);
+      const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/predict-expense?date=${month}`,{
+        headers: {
+          Authorization: token,
+        },
+      });
+      console.log(response.data.predictedExpense);
+      setPredictedExpense(response.data.predictedExpense);
+    } catch (error) {
+      console.log(error);
+      console.error('Error fetching predicted expense:', error);
+    }
+  };
 
   if (loading) return <div className="loading">Loading...</div>;
 
@@ -140,6 +160,27 @@ const Dashboard = () => {
   Download Report
 </button>
 
+<div className="prediction-container">
+        <h4>Predict Expenses</h4>
+        <DatePicker
+          selected={predictionDate}
+          onChange={(date) => setPredictionDate(date)}
+          dateFormat="yyyy-MM"
+          showMonthYearPicker
+          showFullMonthYearPicker
+          placeholderText="Select Prediction Month"
+        />
+        <button className="predict-expense-btn" onClick={fetchPredictedExpense}>
+          Get Predicted Expense
+        </button>
+
+        {predictedExpense !== null && (
+          <div className="predicted-expense">
+            <h4>Predicted Expense for {predictionDate.toISOString().slice(0, 7)}:</h4>
+            <p>${predictedExpense}</p>
+          </div>
+        )}
+      </div>
       <div className="charts-container">
         <h4>Budget vs Actual Spending by Category</h4>
         <div className="chart-row">
