@@ -218,19 +218,22 @@ const Dashboard = () => {
             </div>
           ))}
         </div>
-
+        <div class="pie-chart">
         <h4>Spending by Category</h4>
         <div className="chart-row">
           <div className="chart pie-chart">
             <Pie data={pieChartData} options={{ responsive: true }} />
           </div>
         </div>
+          </div>
 
+          <div class="line-chart">
         <h4>Spending Trends Over Time</h4>
         <div className="chart-row">
           <div className="chart line-chart">
             <Line data={lineChartData} options={{ responsive: true }} />
           </div>
+        </div>
         </div>
       </div>
     </div>
