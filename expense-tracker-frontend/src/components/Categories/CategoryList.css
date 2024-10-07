@@ -1,0 +1,32 @@
+.category-list-container {
+  margin-top: 30px;
+  margin: 20px;
+}
+
+.add-category-button {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.add-category-button:hover {
+  background-color: #218838;
+}
+
+.category-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.category-table th,
+.category-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.category-table th {
+  background-color: #f2f2f2;
+}

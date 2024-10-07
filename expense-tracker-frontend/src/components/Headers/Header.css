@@ -1,0 +1,19 @@
+.app-header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures the header is above other elements */
+  }
+  
+  .app-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  

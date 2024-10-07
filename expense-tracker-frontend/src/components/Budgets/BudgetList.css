@@ -1,0 +1,70 @@
+.budget-list-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.add-budget-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.add-budget-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.budget-table {
+  
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.budget-table th,
+.budget-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.budget-table th {
+  background-color: #f2f2f2;
+}
+
+.edit-button,
+.delete-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.edit-button {
+  background-color: #ffc107; /* Bootstrap warning color */
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #e0a800; /* Darker shade on hover */
+}
+
+.delete-button {
+  background-color: #dc3545; /* Bootstrap danger color */
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333; /* Darker shade on hover */
+}

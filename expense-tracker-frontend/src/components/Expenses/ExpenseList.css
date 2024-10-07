@@ -1,0 +1,84 @@
+.expense-list-container {
+    padding: 30px; 
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    max-width: 800px; 
+    margin: 20px auto; 
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50; 
+    margin-bottom: 20px;
+    font-size: 28px; /* Slightly larger font size */
+}
+
+.add-expense-button {
+    background-color: #4caf50; /* Green button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px; /* Slightly larger radius */
+    cursor: pointer;
+    margin: 0 auto; /* Centering the button */
+    display: block; /* Allow margin auto to work */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    font-size: 16px; /* Larger font for better visibility */
+}
+
+.add-expense-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.expense-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Space above the table */
+}
+
+.expense-table th,
+.expense-table td {
+    border: 1px solid #ddd;
+    padding: 12px; /* Increased padding for better spacing */
+    text-align: center;
+}
+
+.expense-table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold; /* Bold text for headers */
+}
+
+.expense-table td {
+    color: #555; /* Softer text color for better readability */
+}
+
+.edit-button {
+    background-color: #ffa500; /* Orange button */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.edit-button:hover {
+    background-color: #ff9000; /* Darker orange on hover */
+}
+
+.delete-button {
+    background-color: #f44336; /* Red button */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.delete-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
