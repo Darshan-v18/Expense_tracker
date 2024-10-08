@@ -18,6 +18,7 @@
     "html2canvas": "^1.4.1",
     "jsonwebtoken": "^9.0.2",
     "jspdf": "^2.5.2",
+    "node-cron": "^3.0.3",
     "nodemailer": "^6.9.15",
     "numpy": "^0.0.1",
     "pg": "^8.13.0",

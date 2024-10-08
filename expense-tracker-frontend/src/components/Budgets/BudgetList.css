@@ -15,14 +15,14 @@ h2 {
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
-  background-color: #007bff; /* Bootstrap primary color */
+  background-color: #28a745; 
   color: white;
   cursor: pointer;
   margin-bottom: 20px;
 }
 
 .add-budget-button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: #275f27; 
 }
 
 .budget-table {
@@ -52,19 +52,19 @@ h2 {
 }
 
 .edit-button {
-  background-color: #ffc107; /* Bootstrap warning color */
+  background-color: #ffc107; 
   color: white;
 }
 
 .edit-button:hover {
-  background-color: #e0a800; /* Darker shade on hover */
+  background-color: #e0a800; 
 }
 
 .delete-button {
-  background-color: #dc3545; /* Bootstrap danger color */
+  background-color: #dc3545; 
   color: white;
 }
 
 .delete-button:hover {
-  background-color: #c82333; /* Darker shade on hover */
+  background-color: #c82333; 
 }

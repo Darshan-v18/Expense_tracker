@@ -1,12 +1,20 @@
 const express = require('express');
+const cron = require('node-cron');
 const bodyParser = require('body-parser');
 const { sequelize } = require('./models');
 const routes = require('./routes'); // Import your routes
 require('dotenv').config();
 const cors = require('cors');
+const {runBackup} = require('./Backups/backup');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+cron.schedule('0 2 * * *', () => {
+  console.log('Running PostgreSQL backup...');
+  runBackup();
+});
+
 
 app.use(bodyParser.json())
 app.use(cors({
