@@ -8,7 +8,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // Clones the GitHub repository
-                git url: 'https://github.com/Darshan-v18/Expense_tracker'
+                git url: 'https://github.com/Darshan-v18/Expense_tracker.git'
             }
         }
         stage('Install and Test Frontend') {
