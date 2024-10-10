@@ -9,7 +9,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensures the header is above other elements */
+    z-index: 1000; 
   }
   
   .app-header h1 {

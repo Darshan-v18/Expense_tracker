@@ -9,7 +9,7 @@ const ExpenseForm = ({ initialData = {} }) => {
   const [amount, setAmount] = useState(initialData.amount || '');
   const [category, setCategory] = useState(initialData.category || '');
   const [receipt, setReceipt] = useState(initialData.receipt || '');
-  // const currentDate = new Date().toISOString().slice(0, 10);
+  
   const [date,setDate] = useState(initialData.date || '');
 
   const dispatch = useDispatch();
@@ -49,14 +49,14 @@ const ExpenseForm = ({ initialData = {} }) => {
       }
     }
 
-    // Add or edit the expense after confirmation
+    
     if (initialData.id) {
       dispatch(editExpense(initialData.id, { description, amount, categoryId, receipt,date }));
     } else {
       dispatch(addExpense({ description, amount, categoryId, receipt,date }));
     }
 
-    // Reset form after submission
+    
     setDescription('');
     setAmount('');
     setCategory('');
@@ -108,7 +108,7 @@ const ExpenseForm = ({ initialData = {} }) => {
         <input
           type="date"
           value={date}
-          onChange={(e) => setDate(e.target.value)}  // Set the date
+          onChange={(e) => setDate(e.target.value)}  
           required
         />
       </div>

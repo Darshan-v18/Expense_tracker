@@ -24,46 +24,6 @@ const setBudget = async (req, res) => {
   }
 };
 
-// const checkOverspending = async (req, res) => {
-//   const { month } = req.query; 
-//   const userId = req.user.id;
-  
-//   const startDate = new Date(`${month}-01T00:00:00Z`); 
-//   const endDate = new Date(new Date(startDate).setMonth(startDate.getMonth() + 1)); 
-
-//   try {
-//     const budgets = await Budget.findAll({
-//       where: { userId, month },
-//       include: [{ model: Category, as: 'category' }]
-//     });
-//     let overspendCategories = [];
-
-//     for (let budget of budgets) {
-//       const totalSpent = await Expense.sum('amount', {
-//         where: {
-//           categoryId: budget.categoryId,
-//           userId,
-//           createdAt: {
-//             [Op.between]: [startDate, endDate] 
-//           }
-//         }
-//       });
-
-//       if (totalSpent > budget.amount) {
-//         overspendCategories.push(budget.category.name);
-//       }
-//     }
-
-//     if (overspendCategories.length > 0) {
-//       return res.status(200).json({ message: 'Overspending alert', categories: overspendCategories });
-//     }
-
-//     res.status(200).json({ message: 'Within budget' });
-//   } catch (error) {
-//     res.status(500).json({ error: 'Failed to fetch report' });
-//   }
-// };
-
 
 const checkOverspending2 = async (req, res) => {
   const { categoryId, amount, date } = req.body; 

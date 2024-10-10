@@ -10,7 +10,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showModal, setShowModal] = useState(false);
-  const [loading, setLoading] = useState(false); // State for loading
+  const [loading, setLoading] = useState(false); 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -36,9 +36,9 @@ const Login = () => {
       <form className="auth-form" onSubmit={handleSubmit}>
         <h2>Login</h2>
         <input
-          type="email" // Changed to email for better validation
+          type="email" 
           value={email}
-          onChange={(e) => setEmail(e.target.value)} // Fixed function name to camelCase
+          onChange={(e) => setEmail(e.target.value)} 
           placeholder="Email"
           required
         />
@@ -50,14 +50,14 @@ const Login = () => {
           required
         />
         <button type="submit" className="auth-button" disabled={loading}>
-          {loading ? 'Logging in...' : 'Login'} {/* Show loading text */}
+          {loading ? 'Logging in...' : 'Login'} {}
         </button>
         <p className="auth-toggle">
           Don't have an account? <a href="/signup">Sign up</a>
         </p>
         <p className="auth-toggle">
           <button 
-            type="button" // Button for forgot password action
+            type="button" 
             onClick={handleForgotPassword} 
             style={{ background: 'none', border: 'none', color: 'blue', textDecoration: 'underline', cursor: 'pointer' }}>
             Forgot Password?

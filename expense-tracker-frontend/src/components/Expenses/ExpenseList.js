@@ -12,7 +12,7 @@ const ExpenseList = () => {
   const dispatch = useDispatch();
   const { expenses } = useSelector((state) => state.expenses);
   const [isFormVisible, setIsFormVisible] = useState(false);
-  const [currentExpense, setCurrentExpense] = useState(null); // To hold the current expense for editing
+  const [currentExpense, setCurrentExpense] = useState(null); 
 
   useEffect(() => {
     dispatch(fetchExpenses());

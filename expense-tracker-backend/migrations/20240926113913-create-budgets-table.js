@@ -30,7 +30,7 @@ module.exports = {
       },
       month: {
         type: Sequelize.STRING,
-        allowNull: false // E.g., 'September 2024'
+        allowNull: false 
       },
       createdAt: {
         allowNull: false,

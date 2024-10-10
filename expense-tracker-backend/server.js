@@ -2,7 +2,7 @@ const express = require('express');
 const cron = require('node-cron');
 const bodyParser = require('body-parser');
 const { sequelize } = require('./models');
-const routes = require('./routes'); // Import your routes
+const routes = require('./routes'); 
 require('dotenv').config();
 const cors = require('cors');
 const {runBackup} = require('./Backups/backup');
@@ -21,7 +21,7 @@ app.use(cors({
   origin: 'http://localhost:3000',
   credentials: true, 
 }));
-app.use('/api', routes); // Use routes prefixed with /api
+app.use('/api', routes); 
 
 sequelize.sync().then(() => {
   app.listen(PORT, () => {

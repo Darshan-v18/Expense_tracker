@@ -7,16 +7,16 @@ import NavBar from '../Headers/Navbar';
 
 const CategoryList = () => {
   const dispatch = useDispatch();
-  const categories = useSelector((state) => state.categories.categories); // Get categories from Redux
+  const categories = useSelector((state) => state.categories.categories); 
 
-  const [isFormVisible, setIsFormVisible] = useState(false); // For toggling form visibility
+  const [isFormVisible, setIsFormVisible] = useState(false); 
 
   useEffect(() => {
-    dispatch(fetchCategories()); // Fetch categories on component load
+    dispatch(fetchCategories()); 
   }, [dispatch]);
 
   const toggleFormVisibility = () => {
-    setIsFormVisible(!isFormVisible); // Toggle visibility of the form
+    setIsFormVisible(!isFormVisible); 
   };
 
   return (
@@ -28,7 +28,7 @@ const CategoryList = () => {
         {isFormVisible ? 'Cancel' : 'Add Category'}
       </button>
 
-      {isFormVisible && <CategoryForm />} {/* Show form if the button is clicked */}
+      {isFormVisible && <CategoryForm />} {}
 
       <table className="category-table">
         <thead>

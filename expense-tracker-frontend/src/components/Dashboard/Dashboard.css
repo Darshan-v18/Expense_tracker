@@ -95,12 +95,12 @@
   flex: 1 1 calc(30% - 20px);
   margin: 10px;
   min-width: 200px;
-  max-height: 400px; /* Prevent excessive height */
+  max-height: 400px; 
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  overflow: hidden; /* Prevents overflow */
+  overflow: hidden; 
 }
 
 

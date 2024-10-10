@@ -30,7 +30,6 @@ router.get('/categories', auth, getCategories);
 // Budget Routes
 router.post('/budgets', auth, setBudget);
 router.get('/budgets', auth, getAllBudgets);
-// router.get('/budgets/overspending', auth, checkOverspending);
 router.post('/budgets/overspending2', auth, checkOverspending2);
 router.put('/budgets/:budgetId', auth, editBudget);
 router.delete('/budgets/:budgetId', auth, deleteBudget);

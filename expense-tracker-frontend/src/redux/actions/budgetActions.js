@@ -10,7 +10,7 @@ export const DELETE_BUDGET = 'DELETE_BUDGET';
 
 export const fetchBudgets = () => async (dispatch) => {
   const token = Cookies.get('authToken');
-  console.log('Token:', token); // Log the token
+  console.log('Token:', token); 
 
   dispatch({ type: FETCH_BUDGETS_REQUEST });
 
@@ -18,7 +18,7 @@ export const fetchBudgets = () => async (dispatch) => {
     const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/budgets`, {
       headers: { Authorization: token },
     });
-    console.log('Response Data:', response.data); // Log response data
+    console.log('Response Data:', response.data); 
     dispatch({ type: FETCH_BUDGETS_SUCCESS, payload: response.data });
   } catch (error) {
     dispatch({ type: FETCH_BUDGETS_FAILURE, payload: error.message });

@@ -8,15 +8,14 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-          model: 'Users', // This refers to the Users table
+          model: 'Users', 
           key: 'id',
         },
-        onDelete: 'CASCADE', // If the user is deleted, also delete OTP
+        onDelete: 'CASCADE', 
       }
     });
   
     Otp.associate = (models) => {
-      // An OTP belongs to a User
       Otp.belongsTo(models.User, {
         foreignKey: 'userId',
         as: 'user',

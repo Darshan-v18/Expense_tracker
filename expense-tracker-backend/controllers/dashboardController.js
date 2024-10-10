@@ -51,7 +51,6 @@ exports.getDashboardOverview = async (req, res) => {
       };
     }));
 
-    // Get spending trends over the past months (Spending Trends Over Time)
     const spendingTrends = await Expense.findAll({
       attributes: [
         [Sequelize.fn('DATE_TRUNC', 'month', Sequelize.col('date')), 'month'],

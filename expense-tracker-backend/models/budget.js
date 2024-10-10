@@ -27,7 +27,6 @@ module.exports = (sequelize, DataTypes) => {
     });
   
     Budget.associate = (models) => {
-      // Budget belongs to a user and category
       Budget.belongsTo(models.User, { foreignKey: 'userId', as: 'user' });
       Budget.belongsTo(models.Category, { foreignKey: 'categoryId', as: 'category' });
     };

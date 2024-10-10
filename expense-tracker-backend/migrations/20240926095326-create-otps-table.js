@@ -16,10 +16,10 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-          model: 'Users', // This refers to the Users table
+          model: 'Users',
           key: 'id',
         },
-        onDelete: 'CASCADE', // Ensures OTPs are deleted if the user is deleted
+        onDelete: 'CASCADE', 
         onUpdate: 'CASCADE'
       },
       createdAt: {

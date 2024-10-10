@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addBudget, editBudget } from '../../redux/actions/budgetActions';
 import './BudgetForm.css';
 import { fetchCategories } from '../../redux/actions/categoryAction';
-import DatePicker from 'react-datepicker'; // Import DatePicker from the package
+import DatePicker from 'react-datepicker'; 
 import 'react-datepicker/dist/react-datepicker.css';
 
 const BudgetForm = ({ budgetToEdit, onClose }) => {
