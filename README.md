@@ -32,7 +32,7 @@ An advanced Expense Tracker application built with React.js, Node.js, and Postgr
 - **Monthly Selector**: Date picker for month-year selection to view monthly expenses.
 
 ### Reporting
-- **Weekly & Monthly Reports**: Generate reports on expenses.
+- **Monthly Reports**: Generate reports on expenses.
 - **Predictive Analytics**: Predict next month’s expenses based on historical data using linear regression.
 
 ### Additional Features
